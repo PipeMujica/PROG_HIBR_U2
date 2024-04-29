@@ -1,0 +1,32 @@
+<ion-list lines="none">
+  <ion-card>
+    <ion-input 
+      [(ngModel)]="frase"     
+      required="required" 
+      minlength="5"
+      #citaInput="ngModel"
+      label="CITA" 
+      placeholder="Frase" 
+      labelPlacement="stacked" />
+    <ion-input 
+      [(ngModel)]="autor"
+      required="required"
+      minlength="2"
+      #citaInput="ngModel"
+      label="Autor"
+      placeholder="Nombre autor(a)"/>
+        <ion-button
+          [disabled]="!citaInput.valid" 
+          (click)="agregarCita();citaInput.control.markAsPristine();citaInput.control.markAsUntouched()"
+          fill="clear"
+          aria-label="Botón para agregar producto">
+            <ion-icon name="add-outline" /> AGREGAR
+        </ion-button>
+  </ion-card>
+  <ion-item>
+    <ion-text 
+      [hidden]="citaInput.valid || citaInput.pristine"
+      color="danger"
+    >Escriba una frase de 5 o más carácteres!</ion-text>
+  </ion-item>
+</ion-list>

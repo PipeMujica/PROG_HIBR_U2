@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Citas
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/configuracion']">
+        <ion-icon icon="settings-outline" slot="icon-only"/>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>"No son las habilidades lo que demuestra lo que somos, son nuestras decisiones"</ion-card-title>
+    <ion-card-subtitle>Albus Dumbledore</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+
+  <ion-toolbar color="No">
+  <ion-fab slot="primary" horizontal="end">
+    <ion-fab-button [routerLink]="['/crear-citas']" size="small">
+      <ion-icon name="add" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-toolbar>

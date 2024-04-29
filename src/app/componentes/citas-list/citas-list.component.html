@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let p of cita">{{p.frase}}</li>
+</ul>
+
+<ion-list>
+  <ion-item *ngFor="let p of cita">
+    <ion-button 
+      (click)="onEliminarCita"
+      slot="end" 
+      aria-label="Opción para eliminar la cita" >
+      <ion-icon slot="icon-only" name="trash" />
+    </ion-button>
+  </ion-item>  
+</ion-list>

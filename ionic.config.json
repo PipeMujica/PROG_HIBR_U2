@@ -1,0 +1,7 @@
+{
+  "name": "pruebau2proghibr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
